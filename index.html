@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>ToDo App</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen flex items-center justify-center p-6">
+
+<div class="bg-gradient-to-r from-purple-500 to-purple-400 p-8 rounded-3xl shadow-2xl w-[1000px]">
+
+<h1 class="text-3xl font-bold text-center text-white mb-6">
+Productivity Board
+</h1>
+
+<!-- Input Section -->
+<div class="bg-white rounded-xl p-4 mb-6 flex gap-3">
+<input id="taskInput" type="text" placeholder="Enter task..."
+class="flex-1 border rounded-lg p-2 focus:outline-none focus:ring-2 focus:ring-purple-400">
+
+<select id="weekSelect" class="border rounded-lg p-2">
+<option value="week1">Week 01</option>
+<option value="week2">Week 02</option>
+<option value="week3">Week 03</option>
+<option value="week4">Week 04</option>
+</select>
+
+<select id="categorySelect" class="border rounded-lg p-2">
+<option value="urgent">Important & Urgent</option>
+<option value="important">Important not Urgent</option>
+<option value="notUrgent">Not Important but Urgent</option>
+<option value="none">Not Important & Not Urgent</option>
+</select>
+
+<button id="addBtn"
+class="bg-purple-500 text-white px-4 rounded-lg hover:bg-purple-600 transition">
+Add
+</button>
+</div>
+
+<!-- Board -->
+<div class="grid grid-cols-2 gap-6">
+
+<div class="bg-white rounded-2xl shadow-lg p-6 space-y-4">
+<h2 class="font-bold text-lg mb-2">Week 01</h2>
+<div id="week1-urgent"></div>
+<div id="week1-important"></div>
+<div id="week1-notUrgent"></div>
+<div id="week1-none"></div>
+</div>
+
+<div class="bg-yellow-50 border-2 border-yellow-300 rounded-2xl shadow-lg p-6 space-y-4">
+<h2 class="font-bold text-lg mb-2">Week 02</h2>
+<div id="week2-urgent"></div>
+<div id="week2-important"></div>
+<div id="week2-notUrgent"></div>
+<div id="week2-none"></div>
+</div>
+
+<div class="bg-white rounded-2xl shadow-lg p-6 space-y-4">
+<h2 class="font-bold text-lg mb-2">Week 03</h2>
+<div id="week3-urgent"></div>
+<div id="week3-important"></div>
+<div id="week3-notUrgent"></div>
+<div id="week3-none"></div>
+</div>
+
+<div class="bg-yellow-50 border-2 border-yellow-300 rounded-2xl shadow-lg p-6 space-y-4">
+<h2 class="font-bold text-lg mb-2">Week 04</h2>
+<div id="week4-urgent"></div>
+<div id="week4-important"></div>
+<div id="week4-notUrgent"></div>
+<div id="week4-none"></div>
+</div>
+
+</div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
